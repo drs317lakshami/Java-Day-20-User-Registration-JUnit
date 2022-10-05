@@ -2,10 +2,12 @@ package com.blz.regex;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class UserRegistrationJunit {
+
+public class UserRegistration {
+
 	public static void main(String[] args) {
 		System.out.println("Regular Expression program to validate User Registration!!!");
-		UserRegistrationJunit userEntry = new UserRegistrationJunit();
+		UserRegistration userEntry = new UserRegistration();
 
 		userEntry.testMails();
 	}
