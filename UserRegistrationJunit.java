@@ -2,12 +2,14 @@ package com.blz.regex;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class UserRegistrationJunit {
+
+public class UserRegistration {
+
 	public static void main(String[] args) {
 		System.out.println("Regular Expression program to validate User Registration!!!");
-		UserRegistrationJunit userEntry = new UserRegistrationJunit();
+		UserRegistration userEntry = new UserRegistration();
 
-		userEntry.testMails();
+		userEntry.validateEntries();
 	}
 
 	public void validateEntries() {
@@ -33,33 +35,8 @@ public class UserRegistrationJunit {
 		return sc.nextLine();
 	}
 	
-	public void testMails() {
-		validateEmail("abc@yahoo.com");
-		validateEmail("abc");
-		validateEmail("abc-100@yahoo.com");
-		validateEmail("abc@.com.my");
-		validateEmail("abc.100@yahoo.com");
-		validateEmail("abc123@gmail.a");
-		validateEmail("abc111@abc.com");
-		validateEmail("abc123@.com");
-		validateEmail("abc-100@abc.net");
-		validateEmail("abc123@.com.com");
-		validateEmail("abc.100@abc.com.au");
-		validateEmail(".abc@abc.com");
-		validateEmail("abc@1.com");
-		validateEmail("abc()*@gmail.com");
-		validateEmail("abc@gmail.com.com");
-		validateEmail("abc@%*.com");
-		validateEmail("abc+100@gmail.com");
-		validateEmail("abc..2002@gmail.com");
-		validateEmail("abc.@gmail.com");
-		validateEmail("abc@abc@gmail.com");
-		validateEmail("abc@gmail.com.1a");
-		validateEmail("abc@gmail.com.aa.au");
-	}
-	
 	private void validatePassword(String input) {
-		String password = "^(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z]{8,}$";
+		String password = "[0-9a-zA-Z]{8,}";
 		
 		System.out.println("\nValidating Password...");
 		match(password, input);
@@ -108,3 +85,5 @@ public class UserRegistrationJunit {
 	}
 
 }
+
+
